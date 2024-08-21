@@ -1,0 +1,23 @@
+conjuge1 = float(input("Digite a renda do primeiro cônjuge (R$): "))
+conjuge2 = float(input("Digite a renda do segundo cônjuge (R$): "))
+rendaconj = conjuge1 + conjuge2
+if rendaconj <= 900:
+    aliquota = "0"
+    imposto = 0
+    ir = 1
+elif rendaconj <= 1500:
+    aliquota = "10"
+    imposto = 0.1  
+    ir = 0.9  
+elif rendaconj <= 2500:
+    aliquota = "15"
+    imposto = 0.15
+    ir = 0.85
+elif rendaconj > 2500:
+    aliquota = "25"
+    imposto = 0.25 
+    ir = 0.75
+print("RENDA CONJUNTA = {:.2f}".format(rendaconj))
+print("ALÍQUOTA UTILIZADA = {}%".format(aliquota))
+print("IMPOSTO DE RENDA = {:.2f}".format((rendaconj) * imposto))
+print("RENDA LÍQUIDA = {:.2f}".format((rendaconj) * ir))              
